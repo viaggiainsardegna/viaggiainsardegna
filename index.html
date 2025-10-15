@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viaggia in Sardegna - Prototipo Completo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <img src="logo1.png" alt="Logo Viaggia in Sardegna" class="logo" />
+      <h1>Viaggia in Sardegna</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#case">Case Vacanza</a>
+        <a href="#traghetti">Traghetti</a>
+        <a href="#pacchetti">Pacchetti</a>
+        <a href="#contact">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="home" class="hero">
+      <h2>La Sardegna che cercavi</h2>
+      <p>Spiagge segrete, tour culturali e pacchetti su misura — prenota ora la tua esperienza.</p>
+      <div class="searchbar">
+        <input type="text" placeholder="Destinazione" />
+        <input type="date" />
+        <input type="number" placeholder="Persone" min="1" />
+        <button>Cerca</button>
+      </div>
+    </section>
+
+    <!-- CASE VACANZA -->
+    <section id="case" class="section">
+      <h2>Case Vacanza</h2>
+      <div class="cards">
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Villa Mare" />
+          <h3>Villa Mare</h3>
+          <p>Vista mare, 4 posti letto, piscina privata.</p>
+          <select class="date-prezzo">
+            <option value="2025-06-01|1000">01 Giugno 2025 - 1000€</option>
+            <option value="2025-07-01|1200">01 Luglio 2025 - 1200€</option>
+          </select>
+          <div class="btn-group">
+            <button class="btn-prenota">Prenota</button>
+            <button class="btn-preventivo" data-offerta="Villa Mare">Richiedi Preventivo</button>
+            <button class="btn-acquista">Acquista</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Appartamento Centro" />
+          <h3>Appartamento Centro</h3>
+          <p>Nel cuore di Cagliari, 2 posti letto.</p>
+          <select class="date-prezzo">
+            <option value="2025-06-15|700">15 Giugno 2025 - 700€</option>
+            <option value="2025-07-20|850">20 Luglio 2025 - 850€</option>
+          </select>
+          <div class="btn-group">
+            <button class="btn-prenota">Prenota</button>
+            <button class="btn-preventivo" data-offerta="Appartamento Centro">Richiedi Preventivo</button>
+            <button class="btn-acquista">Acquista</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Casa Tradizionale" />
+          <h3>Casa Tradizionale</h3>
+          <p>Tipica casa sarda, 6 posti letto, giardino.</p>
+          <select class="date-prezzo">
+            <option value="2025-06-10|900">10 Giugno 2025 - 900€</option>
+            <option value="2025-07-15|1100">15 Luglio 2025 - 1100€</option>
+          </select>
+          <div class="btn-group">
+            <button class="btn-prenota">Prenota</button>
+            <button class="btn-preventivo" data-offerta="Casa Tradizionale">Richiedi Preventivo</button>
+            <button class="btn-acquista">Acquista</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TRAGHETTI -->
+    <section id="traghetti" class="section">
+      <h2>Traghetti</h2>
+      <div class="cards">
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Porto Cagliari → Olbia" />
+          <h3>Porto Cagliari → Olbia</h3>
+          <p>Partenze giornaliere, prenotazione veloce.</p>
+          <select class="date-prezzo">
+            <option value="2025-06-05|50">05 Giugno 2025 - 50€</option>
+            <option value="2025-06-20|60">20 Giugno 2025 - 60€</option>
+          </select>
+          <div class="btn-group">
+            <button class="btn-prenota">Prenota</button>
+            <button class="btn-preventivo" data-offerta="Porto Cagliari → Olbia">Richiedi Preventivo</button>
+            <button class="btn-acquista">Acquista</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Porto Golfo Aranci → La Maddalena" />
+          <h3>Porto Golfo Aranci → La Maddalena</h3>
+          <p>Traghetto veloce, posti limitati.</p>
+          <select class="date-prezzo">
+            <option value="2025-06-07|40">07 Giugno 2025 - 40€</option>
+            <option value="2025-06-22|45">22 Giugno 2025 - 45€</option>
+          </select>
+          <div class="btn-group">
+            <button class="btn-prenota">Prenota</button>
+            <button class="btn-preventivo" data-offerta="Porto Golfo Aranci → La Maddalena">Richiedi Preventivo</button>
+            <button class="btn-acquista">Acquista</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PACCHETTI -->
+    <section id="pacchetti" class="section">
+      <h2>Pacchetti Vacanza</h2>
+      <div class="cards">
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Tour Cultura e Spiagge" />
+          <h3>Tour Cultura e Spiagge</h3>
+          <p>7 giorni in Sardegna, hotel e tour guidati inclusi.</p>
+          <select class="date-prezzo">
+            <option value="2025-06-10|1300">10 Giugno 2025 - 1300€</option>
+            <option value="2025-07-01|1500">01 Luglio 2025 - 1500€</option>
+          </select>
+          <div class="btn-group">
+            <button class="btn-prenota">Prenota</button>
+            <button class="btn-preventivo" data-offerta="Tour Cultura e Spiagge">Richiedi Preventivo</button>
+            <button class="btn-acquista">Acquista</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Relax e Mare" />
+          <h3>Relax e Mare</h3>
+          <p>5 giorni in resort fronte mare, escursioni facoltative.</p>
+          <select class="date-prezzo">
+            <option value="2025-06-20|1100">20 Giugno 2025 - 1100€</option>
+            <option value="2025-07-15|1250">15 Luglio 2025 - 1250€</option>
+          </select>
+          <div class="btn-group">
+            <button class="btn-prenota">Prenota</button>
+            <button class="btn-preventivo" data-offerta="Relax e Mare">Richiedi Preventivo</button>
+            <button class="btn-acquista">Acquista</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Avventura e Natura" />
+          <h3>Avventura e Natura</h3>
+          <p>Trekking, escursioni in barca e visite culturali.</p>
+          <select class="date-prezzo">
+            <option value="2025-06-25|1200">25 Giugno 2025 - 1200€</option>
+            <option value="2025-07-10|1400">10 Luglio 2025 - 1400€</option>
+          </select>
+          <div class="btn-group">
+            <button class="btn-prenota">Prenota</button>
+            <button class="btn-preventivo" data-offerta="Avventura e Natura">Richiedi Preventivo</button>
+            <button class="btn-acquista">Acquista</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contact" class="section">
+      <h2>Contatti</h2>
+      <p>Scrivici per qualsiasi informazione o prenotazione personalizzata.</p>
+      <form>
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Messaggio" rows="4" required></textarea>
+        <button type="submit" class="button">Invia</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Viaggia in Sardegna. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

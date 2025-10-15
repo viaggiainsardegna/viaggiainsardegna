@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Richiesta Preventivo - Viaggia in Sardegna</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <img src="logo1.png" alt="Logo Viaggia in Sardegna" class="logo" />
+      <h1>Richiesta Preventivo</h1>
+      <nav>
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Compila il modulo per la tua richiesta</h2>
+      <form id="form-preventivo">
+        <label>
+          Offerta selezionata:
+          <input type="text" id="offerta" readonly />
+        </label>
+        <label>
+          Data e prezzo selezionati:
+          <input type="text" id="datePrezzo" readonly />
+        </label>
+        <label>
+          Nome:
+          <input type="text" id="nome" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" id="email" required />
+        </label>
+        <label>
+          Messaggio:
+          <textarea id="messaggio" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="button">Invia Richiesta</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Viaggia in Sardegna. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script>
+    function getQueryParams() {
+      const params = {};
+      location.search.substr(1).split("&").forEach(pair => {
+        const [key, value] = pair.split("=");
+        if(key) params[decodeURIComponent(key)] = decodeURIComponent(value || "");
+      });
+      return params;
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = getQueryParams();
+      document.getElementById("offerta").value = params.offerta || "";
+      document.getElementById("datePrezzo").value = params.datePrezzo ? params.datePrezzo.replace("|", " - ") : "";
+
+      document.getElementById("form-preventivo").addEventListener("submit", e => {
+        e.preventDefault();
+        alert("Richiesta inviata! Grazie.");
+        e.target.reset();
+      });
+    });
+  </script>
+</body>
+</html>
